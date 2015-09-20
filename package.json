@@ -1,0 +1,31 @@
+{
+  "name": "generator-websmacss",
+  "version": "1.0.0",
+  "description": "A generator for a basic web project with SMACSS structure.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mblomme/generator-websmacss.git"
+  },
+  "keywords": [
+    "SMACSS",
+    "HTML5",
+    "TypeScript"
+  ],
+  "author": "Matthias Blomme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mblomme/generator-websmacss/issues"
+  },
+  "homepage": "https://github.com/mblomme/generator-websmacss#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^0.20.3"
+  },
+  "files": [
+    "app"
+  ]
+}
