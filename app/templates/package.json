@@ -1,0 +1,24 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SMACSS",
+    "HTML5",
+    "TypeScript"
+  ],
+  "author": "",
+  "license": "",
+  "homepage": "",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.6"
+  },
+  "files": [
+    "app"
+  ]
+}

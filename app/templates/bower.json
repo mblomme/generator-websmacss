@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "WebProject Name",
   "version": "",
   "authors": [
     ""
@@ -14,5 +14,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20"
+  }
 }

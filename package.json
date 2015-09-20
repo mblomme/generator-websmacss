@@ -23,7 +23,8 @@
   "homepage": "https://github.com/mblomme/generator-websmacss#readme",
   "dependencies": {
     "mkdirp": "^0.5.1",
-    "yeoman-generator": "^0.20.3"
+    "yeoman-generator": "^0.20.3",
+    "yosay": "^1.0.5"
   },
   "files": [
     "app"
