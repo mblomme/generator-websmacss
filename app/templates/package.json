@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "version": "",
+  "name": "<%= appname %>",
+  "version": "<%= appversion %>",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,8 +11,8 @@
     "HTML5",
     "TypeScript"
   ],
-  "author": "",
-  "license": "",
+  "author": "<%= appauthor %>",
+  "license": "<%= applicense %>",
   "homepage": "",
   "devDependencies": {
     "gulp": "^3.9.0",

@@ -1,0 +1,10 @@
+.is-collapsed-mobile {
+    @include mq(small) {
+        visibility: collapse;
+        padding: 0px;
+        height: 0;
+        margin: 0;
+        line-height: 0;
+    }
+}
+

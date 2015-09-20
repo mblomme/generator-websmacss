@@ -1,1 +1,7 @@
-# Webproject name
+# <%= appname %>
+
+## Version
+<%= appversion %>
+
+## License
+<%= applicense %>

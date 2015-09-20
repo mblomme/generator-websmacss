@@ -1,13 +1,13 @@
 {
-  "name": "WebProject Name",
-  "version": "",
+  "name": "<%= appname %>",
+  "version": "<%= appversion %>",
   "authors": [
-    ""
+    "<%= appauthor %>"
   ],
   "moduleType": [
     "globals"
   ],
-  "license": "",
+  "license": "<%= applicense %>",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -1,4 +1,4 @@
-# How to contribute
+# How to contribute to <%= appname %>
 
 Third-party patches are essential for keeping puppet great.
 

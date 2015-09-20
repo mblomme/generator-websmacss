@@ -1,0 +1,83 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// BEM selectors
+@mixin e($element) {
+    &-#{$element} {
+        @content;
+    }
+}
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+// Media Queries
+@mixin mq($break) {
+    @if $break == "small" {
+        @media(min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+            @content;
+        }
+    }
+    @else if $break == "medium" {
+        @media(min-width: $breakpoint-md + 1) {
+            @content;
+        }
+    }
+    @else if $break == "large" {
+        @media(min-width: $breakpoint-lg) {
+            @content;
+        }
+    }
+    @else {
+        @error "MQ mixin: invalid value for `#{$break}`";
+    }
+}
+
+// Generating :before or :after pseudo-element shapes
+@mixin p-el(
+$el,
+$el-w: null,
+$el-h: null) {
+    @if $el == "before" or $el == "after" { 
+        &:#{$el} {
+            @extend %pseudos;
+            width: $el-w;
+            height: $el-h;
+            @content;
+        }
+    } 
+    @else {
+        @error "`#{$el}` is not a valid pseudo-element.";
+    }
+}
+
+// Image replacement
+@mixin img-replace($img, $w, $h, $disp: block) {
+    background-image: url('#{$path--rel}/#{$img}');
+    background-repeat: no-repeat;
+    width: $w;
+    height: $h;
+    display: $disp;
+}
+
+@mixin doubly($margin: 1em) {
+    & + & {
+        margin-left: $margin;
+        @content;
+    }
+}
+
+// Grid columns
+@mixin g-columns {
+    @for $i from 1 through $g-col-count {
+        $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;  
+        $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+        // Generate column modifier classes
+        &--#{$i} {
+            width: percentage($target / $context);
+        }
+    }
+}
