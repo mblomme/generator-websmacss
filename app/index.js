@@ -8,7 +8,7 @@ module.exports = generators.Base.extend({
 	// YEOMAN RUN LOOP
 	//------------------------------------------------------------------------
 	initializing: function () {
-		this.log(yosay('Allo Allo! Welcome to WebSMACSS!', {maxLength: 10}));
+		this.log(yosay('Allo Allo! Welcome to WebSMACSS!', { maxLength: 10 }));
 	},
 
 	prompting: function () {
@@ -37,6 +37,7 @@ module.exports = generators.Base.extend({
 			this.appauthor = answers.appauthor;
 			this.applicense = answers.applicense;
 			this.appversion = answers.appversion;
+			this.appdeps = answers.appdeps;
 			this.log(answers.name);
 			done();
 		}.bind(this));
@@ -79,20 +80,24 @@ module.exports = generators.Base.extend({
 				default: true,
 				choices: [
 					{
-						name: 'JQuery',
-						value: ['JQuery']
+						name: 'jquery',
+						value: 'JQuery'
 					},
 					{
-						name: 'JQueryUI',
-						value: ['JQueryUI']
+						name: 'jqueryUI',
+						value: 'JQueryUI'
 					},
 					{
-						name: 'Angular 2',
-						value: ['Angular2']
+						name: 'angular2',
+						value: 'Angular2'
 					},
 					{
-						name: 'TypeScript',
-						value: ['TypeScript']
+						name: 'requirejs',
+						value: 'requirejs'
+					},
+					{
+						name: 'typescript',
+						value: 'TypeScript'
 					}]
 			}
 		];
@@ -107,7 +112,8 @@ module.exports = generators.Base.extend({
 				appname: this.appname,
 				appversion: this.appversion,
 				appauthor: this.appauthor,
-				applicense: this.applicense
+				applicense: this.applicense,
+				appdeps: this.appdeps
 			}
 
 		this._createFolderStructure(appDir);
@@ -128,6 +134,7 @@ module.exports = generators.Base.extend({
 
 	_createStarterFiles: function (srcRoot, dstRoot, context) {
 		this.fs.copy(srcRoot + "/.bowerrc", dstRoot + "/.bowerrc");
+		this.fs.copy(srcRoot + "/gulpfile.js", dstRoot + "/gulpfile.js");
 		this.fs.copy(srcRoot + "/.jshintrc", dstRoot + "/.jshintrc");
 		this.fs.copyTpl(srcRoot + "/bower.json", dstRoot + "/bower.json", context);
 		this.fs.copyTpl(srcRoot + "/package.json", dstRoot + "/package.json", context);

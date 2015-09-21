@@ -16,6 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "requirejs": "~2.1.20"
+ //     "requirejs": "~2.1.20"<% if(appdeps.jquery !== "") { %>,
+ //     "jquery": "~2.1.4"<% } %><% if(appdeps.angular !== "") { %>,
+ //     "angular": "angular2#~1.4.6"<% } %><% if(appdeps.jqueryUI !== "") { %>,
+  //    "jquery-ui": "jqueryui#~1.11.4"<%= } %>
   }
 }
