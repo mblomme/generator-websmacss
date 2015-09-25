@@ -16,9 +16,10 @@
     "tests"
   ],
   "dependencies": {
- //     "requirejs": "~2.1.20"<% if(appdeps.jquery !== "") { %>,
- //     "jquery": "~2.1.4"<% } %><% if(appdeps.angular !== "") { %>,
- //     "angular": "angular2#~1.4.6"<% } %><% if(appdeps.jqueryUI !== "") { %>,
-  //    "jquery-ui": "jqueryui#~1.11.4"<%= } %>
+    <% if(appdeps.indexOf("requirejs") > -1) { %>
+    "requirejs": null<% } %><% if(appdeps.indexOf("JQuery") > -1) { %>
+    ,"jquery": null<% } %><% if(appdeps.indexOf("Angular2") > -1) { %>
+    ,"angular": null<% } %><% if(appdeps.indexOf("JQueryUI") > -1) { %>
+    ,"jquery-ui": null<% } %>
   }
 }
