@@ -81,15 +81,15 @@ module.exports = generators.Base.extend({
 				choices: [
 					{
 						name: 'jquery',
-						value: 'JQuery'
+						value: 'jquery'
 					},
 					{
 						name: 'jqueryUI',
-						value: 'JQueryUI'
+						value: 'jquery-ui'
 					},
 					{
 						name: 'angular2',
-						value: 'Angular2'
+						value: 'angular'
 					},
 					{
 						name: 'requirejs',
@@ -98,7 +98,7 @@ module.exports = generators.Base.extend({
 					{
 						name: 'typescript',
 						value: 'TypeScript'
-					}]
+					}]					
 			}
 		];
 		return prompts;

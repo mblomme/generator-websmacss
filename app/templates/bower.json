@@ -16,10 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    <% if(appdeps.indexOf("requirejs") > -1) { %>
-    "requirejs": null<% } %><% if(appdeps.indexOf("JQuery") > -1) { %>
-    ,"jquery": null<% } %><% if(appdeps.indexOf("Angular2") > -1) { %>
-    ,"angular": null<% } %><% if(appdeps.indexOf("JQueryUI") > -1) { %>
-    ,"jquery-ui": null<% } %>
+    <% var first = true;for(var i = 0;i<appdeps.length;i++) { if (!first) { %>     
+    ,<%  } first = false; %>"<%= appdeps[i] %>":null<% } %>
   }
 }
