@@ -1,5 +1,5 @@
 ﻿/* MAIN */
-  Develop & Main Design:
+  Develop & Main Design:<%= appauthor %>
   Twitter:
   Site:
 

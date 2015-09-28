@@ -94,10 +94,6 @@ module.exports = generators.Base.extend({
 					{
 						name: 'requirejs',
 						value: 'requirejs'
-					},
-					{
-						name: 'typescript',
-						value: 'TypeScript'
 					}]					
 			}
 		];
@@ -129,7 +125,9 @@ module.exports = generators.Base.extend({
 		mkdirp(target + '/wwwroot/html');
 		mkdirp(target + '/wwwroot/scripts');
 		mkdirp(target + '/wwwroot/css');
+		mkdirp(target + '/wwwroot/js');
 		mkdirp(target + '/wwwroot/img');
+		mkdirp(target + '/typescript');
 	},
 
 	_createStarterFiles: function (srcRoot, dstRoot, context) {
@@ -139,10 +137,10 @@ module.exports = generators.Base.extend({
 		this.fs.copyTpl(srcRoot + "/bower.json", dstRoot + "/bower.json", context);
 		this.fs.copyTpl(srcRoot + "/package.json", dstRoot + "/package.json", context);
 		this.fs.copy(srcRoot + "/robots.txt", dstRoot + "/app/robots.txt");
-		this.fs.copy(srcRoot + "/humans.txt", dstRoot + "/app/humans.txt");
+		this.fs.copyTpl(srcRoot + "/humans.txt", dstRoot + "/app/humans.txt", context);
 		this.fs.copy(srcRoot + "/humans.txt", dstRoot + "/app/.gitignore");
 		this.fs.copyTpl(srcRoot + "/CONTRIBUTING.md", dstRoot + "/CONTRIBUTING.md", context);
 		this.fs.copyTpl(srcRoot + "/README.md", dstRoot + "/README.md", context);
-		this.directory(srcRoot + "/scss", dstRoot + "/app/scss")
+		this.directory(srcRoot + "/scss", dstRoot + "/app/scss");
 	}
 });
