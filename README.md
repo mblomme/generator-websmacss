@@ -1,4 +1,4 @@
-# generator-websmacss
+# Generator-WebSMACSS
 This generator aims at basic web applications.
 Even small web apps should be written modular en scalable.
 Therefore this generator only does scaffolding to get started with SMACCS and Typescript
