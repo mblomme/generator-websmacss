@@ -3,7 +3,7 @@ This generator aims at basic web applications.
 Even small web apps should be written modular en scalable.
 Therefore this generator only does scaffolding to get started with SMACCS and Typescript
 
-## CSS (SMACCS - Scalable and Modular Architecture for CSS)
+## CSS (Scalable and Modular Architecture for CSS)
 The CSS is organized by the SMACSS guidelines and written in SASS with SCSS as extension.
 
 ## Typescript
